@@ -1,0 +1,25 @@
+\documentclass[spinewidth=9.5mm, british, serif]{cover}
+% When calculating spine width, divide estimated width by 0.8088 to account for A4 differences
+% Check cover.cls for the bleed options; deliver to the printing company without the bleed markers (they are for your own use)
+
+\input{000_metadata}
+
+% Define title
+\title{\thetitle}
+%\subtitle{Optional Subtitle}
+
+% Define authors
+\firstauthor{\theauthor}
+\author{\theauthor}
+
+\backgroundfigure{\put (-5mm,-\paperheight){
+\includegraphics[height=\paperheight]{cover/dustjacket.jpg}
+}}
+%\titlefigure{\includegraphics{figures/KAUST Black.pdf}}
+\contourcolour{black}
+\contourlength{0.07em}
+\color{white}
+
+\begin{document}
+	\makeoutside
+\end{document}

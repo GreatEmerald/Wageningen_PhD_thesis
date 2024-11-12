@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[paperwidth=7cm, paperheight=23cm, top=1cm, bottom=1cm, left=0.6cm, right=0.6cm]{geometry}
+\usepackage[width=8truecm, height=24truecm, center]{crop}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{contour}
+\pagenumbering{gobble}
+
+\input{000_metadata}
+
+% Insert background image
+\AddToHook{shipout/background}{%
+    \put (-120mm,-23.5cm){% Adjust the coordinates as needed, or set to 0 if you have a specific image
+    \includegraphics[height=24cm]{cover/dustjacket.jpg}
+    }%
+}
+% Set global text colour
+\color{white}
+\contourlength{0.07em}
+
+\begin{document}
+\centering
+\section*{Invitation}
+
+It is my pleasure to invite you to attend the public defence of my PhD thesis:
+
+\section*{\thetitle{}}
+
+\vspace{0.2cm}
+
+%\textcolor{black}{
+On \defencedate{} at \defencetime{} in the Omnia~Auditorium of Wageningen~University, Hoge~Steeg~2, Wageningen
+%}
+
+% Optionally add an invitation to the reception or party here
+\vspace{1.5cm}
+
+\textcolor{black}{\textbf{The defence will be followed by a reception in the Omnia Foyer at 3~p.m.}}
+
+\vspace*{\fill} 
+
+\subsection*{\contour{black}{\theauthor{}}}
+
+\contour{black}{professional@wur.nl} \\
+\contour{black}{private@gmail.com}
+
+\subsection*{\contour{black}{Paranymphs:}}
+
+\contour{black}{\textbf{Jane Roe}} \\
+\contour{black}{jane.roe@wur.nl}
+
+\contour{black}{\textbf{Allan Poe}} \\
+\contour{black}{allan.poe@wur.nl}
+
+\end{document}
